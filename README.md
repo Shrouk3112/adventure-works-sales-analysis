@@ -155,8 +155,3 @@ Total Sales, Total Profit, Profit Margin %, Return Rate %, Year-over-Year Growth
 - Data Visualization & Storytelling
 - Python for Data Analysis
 
----
-
-## Notes
-
-This project was built following a real-world analytics workflow to simulate working as a Data Analyst in a company environment.
