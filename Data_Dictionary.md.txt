@@ -1,0 +1,102 @@
+# Data Dictionary - Adventure Works Sales Analysis
+
+## 1. Sales (Fact Table)
+Combined sales data from 2020, 2021, and 2022.
+
+| Column Name     | Description                                      | Data Type     |
+|-----------------|--------------------------------------------------|---------------|
+| OrderDate       | Date when the order was placed                   | Date          |
+| StockDate       | Date when the product was stocked                | Date          |
+| OrderNumber     | Unique order identifier                          | Text          |
+| ProductKey      | Foreign key to Product table                     | Whole Number  |
+| CustomerKey     | Foreign key to Customer table                    | Whole Number  |
+| TerritoryKey    | Foreign key to Territory table                   | Whole Number  |
+| OrderLineItem   | Line item number within the order                | Whole Number  |
+| OrderQuantity   | Number of units ordered                          | Whole Number  |
+
+---
+
+## 2. Returns (Fact Table)
+
+| Column Name     | Description                                      | Data Type     |
+|-----------------|--------------------------------------------------|---------------|
+| ReturnDate      | Date when the product was returned               | Date          |
+| TerritoryKey    | Foreign key to Territory table                   | Whole Number  |
+| ProductKey      | Foreign key to Product table                     | Whole Number  |
+| ReturnQuantity  | Number of units returned                         | Whole Number  |
+
+---
+
+## 3. Product (Dimension Table)
+
+| Column Name            | Description                                      | Data Type     |
+|------------------------|--------------------------------------------------|---------------|
+| ProductKey             | Unique product identifier (Primary Key)          | Whole Number  |
+| ProductSubcategoryKey  | Foreign key to Product Subcategory               | Whole Number  |
+| ProductSKU             | Stock Keeping Unit code                          | Text          |
+| ProductName            | Full name of the product                         | Text          |
+| ModelName              | Product model name                               | Text          |
+| ProductDescription     | Description of the product                       | Text          |
+| ProductColor           | Color of the product                             | Text          |
+| ProductSize            | Size of the product                              | Text          |
+| ProductStyle           | Style of the product                             | Text          |
+| ProductCost            | Cost price of the product                        | Decimal       |
+| ProductPrice           | Selling price of the product                     | Decimal       |
+
+---
+
+## 4. Product Subcategories
+
+| Column Name            | Description                                      | Data Type     |
+|------------------------|--------------------------------------------------|---------------|
+| ProductSubcategoryKey  | Unique subcategory identifier (Primary Key)      | Whole Number  |
+| SubcategoryName        | Name of the product subcategory                  | Text          |
+| ProductCategoryKey     | Foreign key to Product Category                  | Whole Number  |
+
+---
+
+## 5. Product Categories
+
+| Column Name          | Description                                      | Data Type     |
+|----------------------|--------------------------------------------------|---------------|
+| ProductCategoryKey   | Unique category identifier (Primary Key)         | Whole Number  |
+| CategoryName         | Name of the product category (Bikes, Accessories, Clothing, Components) | Text |
+
+---
+
+## 6. Customer (Dimension Table)
+
+| Column Name      | Description                                      | Data Type     |
+|------------------|--------------------------------------------------|---------------|
+| CustomerKey      | Unique customer identifier (Primary Key)         | Whole Number  |
+| Prefix           | Name prefix (Mr., Mrs., etc.)                    | Text          |
+| FirstName        | Customer first name                              | Text          |
+| LastName         | Customer last name                               | Text          |
+| BirthDate        | Customer date of birth                           | Date          |
+| MaritalStatus    | Marital status (M = Married, S = Single)         | Text          |
+| Gender           | Customer gender (M / F)                          | Text          |
+| EmailAddress     | Customer email                                   | Text          |
+| AnnualIncome     | Customer yearly income                           | Whole Number  |
+| TotalChildren    | Number of children                               | Whole Number  |
+| EducationLevel   | Highest education level                          | Text          |
+| Occupation       | Customer occupation                              | Text          |
+| HomeOwner        | Whether the customer owns a home (Yes/No)        | Text          |
+
+---
+
+## 7. Territory (Dimension Table)
+
+| Column Name         | Description                                      | Data Type     |
+|---------------------|--------------------------------------------------|---------------|
+| SalesTerritoryKey   | Unique territory identifier (Primary Key)        | Whole Number  |
+| Region              | Sales region name                                | Text          |
+| Country             | Country name                                     | Text          |
+| Continent           | Continent name                                   | Text          |
+
+---
+
+## 8. Calendar (Dimension Table)
+
+| Column Name | Description                          | Data Type |
+|-------------|--------------------------------------|-----------|
+| Date        | Full date (Primary Key)              | Date      |
