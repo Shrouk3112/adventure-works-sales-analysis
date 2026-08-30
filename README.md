@@ -65,12 +65,22 @@ A **Star Schema** was designed with:
 
 ## Key Insights
 
-- Total quantity sold: **84,174** units
-- Sales showed strong growth from 2020 to 2022
-- **Bikes** drive the majority of revenue, while **Accessories** lead in quantity sold
-- Overall return rate is low at **2.17%**, indicating good product quality
-- The **United States** is the strongest market by a significant margin
-- Higher education and higher income customers tend to generate more sales
+- Total Sales reached **$24.91M** with a strong Profit Margin of **42%** ($10.46M profit).
+- Sales showed clear growth from 2020 to mid-2022, with a noticeable upward trend starting from mid-2021.
+- **Bikes** generate the vast majority of revenue and profit, while **Accessories** lead in return volume (61.8% of total returns).
+- The **United States** is the top-performing market, followed by Australia.
+- Customers with higher education levels (Bachelor’s and Graduate degrees) and Professional occupations contribute the highest sales.
+- Overall Return Rate is low at **2.17%**, but specific products like the Water Bottle – 30 oz. have relatively high return counts.
+- Average Order Value stands at **$990**, with approximately 17K unique customers and 25K total orders.
+
+---
+
+## Recommendations
+
+- Focus marketing and inventory efforts on **Bikes**, especially the Mountain-200 series, as they drive most of the profit.
+- Investigate the high return volume in **Accessories** (particularly water bottles and tire-related products) to reduce return costs.
+- Strengthen presence in the **United States** market while analyzing growth opportunities in Europe and Pacific regions.
+- Target higher-educated and professional customers in future marketing campaigns, as they show higher purchasing power.
 
 ---
 
