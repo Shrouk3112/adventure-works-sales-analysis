@@ -33,6 +33,8 @@ The project follows a realistic company workflow:
 ---
 
 ## Project Structure
+
+```
 AdventureWorks-Sales-Analysis/
 ├── Raw_Data/                          # Original CSV files
 ├── Adventureworks.pbix                # Power BI Dashboard
@@ -41,6 +43,7 @@ AdventureWorks-Sales-Analysis/
 ├── adventure_works_analysis.py
 ├── images/                            # Dashboard & chart screenshots
 └── README.md
+```
 
 ---
 
