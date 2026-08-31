@@ -2,12 +2,10 @@
 
 ## Project Overview
 
-This is an end-to-end Business Intelligence project based on the Adventure Works sales dataset (2020 – mid 2022).  
+This project analyzes Adventure Works sales data from 2020 to mid-2022.
+I worked on sales performance, profitability, product performance, customer behavior, and returns to help answer key business questions.
 
-The goal of this project is to analyze sales performance, profitability, product performance, customer behavior, and returns in order to provide actionable insights for the Sales and Finance teams.
-
-The project follows a realistic company workflow:  
-**Business Understanding → Data Understanding → Data Cleaning → Data Modeling → Analysis → Visualization → Insights**
+I followed a full analysis process: understanding the business questions, cleaning the data, building the model, and creating the dashboard.
 
 ---
 
@@ -148,7 +146,7 @@ Total Sales, Total Profit, Profit Margin %, Return Rate %, Year-over-Year Growth
 
 ---
 
-## Skills Demonstrated
+## Skills Used
 
 - Business Understanding & Requirements Gathering
 - Data Cleaning & ETL
