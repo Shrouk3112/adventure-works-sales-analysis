@@ -45,6 +45,10 @@ AdventureWorks-Sales-Analysis/
 └── README.md
 ```
 
+## Documentation
+
+- [Data Dictionary](Data_Dictionary.md) → Description of all tables and columns
+
 ---
 
 ## Data Model
