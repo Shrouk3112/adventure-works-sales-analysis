@@ -6,6 +6,8 @@ This project explores sales, gross profit, products, customers, territories and 
 
 The sales data is at **order-line level**, not one row per order. Revenue and gross profit are calculated using the product lookup's unit price and unit cost. These are analytical estimates, not audited net profit figures.
 
+This repository currently presents the Power BI dashboard through screenshots. A downloadable `.pbix` report is not included.
+
 ## Verified overall results
 
 | Metric | Value | Definition |
@@ -50,7 +52,7 @@ The returns data has no original order number. The ratio is a period-level unit 
 
 ## Power BI dashboard
 
-The report has four pages. Its core measures use distinct order numbers and distinct purchasing customer keys.
+The dashboard screenshots cover four pages. The reviewed report used distinct order numbers and distinct purchasing customer keys.
 
 ### Executive overview
 ![Executive overview](images/dashboard_executive_overview.png)
@@ -64,9 +66,9 @@ The report has four pages. Its core measures use distinct order numbers and dist
 ### Territory and returns
 ![Territory and returns](images/dashboard_territory_returns.png)
 
-The model contains Sales and Returns fact tables, Customer, Territory and Date dimensions, and a Product → Subcategory → Category hierarchy. The separate category tables make the product hierarchy a snowflake extension rather than a completely flattened star schema.
+The reviewed Power BI model contained Sales and Returns fact tables, Customer, Territory and Date dimensions, and a Product → Subcategory → Category hierarchy. The separate category tables make the product hierarchy a snowflake extension rather than a completely flattened star schema.
 
-Measures include Revenue (Total Sales), Total Profit, Gross Margin, Distinct Orders, Purchasing Customers, Average Order Value, Total Quantity and Returned-to-Sold Unit Ratio. Date relationships connect OrderDate and ReturnDate to the Date table.
+Its measures included Revenue (Total Sales), Total Profit, Gross Margin, Distinct Orders, Purchasing Customers, Average Order Value, Total Quantity and Returned-to-Sold Unit Ratio. Date relationships connected OrderDate and ReturnDate to the Date table.
 
 For year-over-year measures, compare equivalent completed periods. A prior-period value that is absent should be shown as blank rather than interpreted as zero growth.
 
@@ -74,10 +76,11 @@ For year-over-year measures, compare equivalent completed periods. A prior-perio
 
 - `AdventureWorks_Analysis_Queries.sql` expects imported SQL tables. It distinguishes order lines from orders and includes quantity-based and revenue-based breakdowns.
 - The published Power Query combines the yearly sales tables. The SQL file should not be treated as a complete database creation or raw-file import pipeline.
-- `AdventureWorks_Excel_Analysis.xlsx` contains a summary plus January to June 2022 quantity pivots. The existing Summary sheet and its screenshot need two corrections: Total Orders should be 25,164, and exact Purchasing Customers should be 17,416. The displayed 56,046 is the order-line count. This README does not change the workbook or screenshot.
+- `AdventureWorks_Excel_Analysis.xlsx` contains a corrected summary plus January to June 2022 quantity pivots. Summary shows 25,164 distinct orders, 17,416 purchasing customers, 84,174 sold units and 1,828 returned units. The unit return ratio is displayed as 2.17%. The Insights sheet identifies the February dip and distinguishes partial-year 2022 from full-year 2020 and 2021.
 - The workbook's 2022 units do not rise every month: February (6,828) is below January (7,020). Overall January to June volume rises, with a February dip.
 - `adventure_works_analysis.py` aggregates quantity and produces a quantity chart. It requires pandas and matplotlib.
 
+![Corrected Excel Summary](images/excel_summary.jpeg)
 ![Excel quantity pivots for January to June 2022](images/excel_pivot_analysis.png)
 ![Units sold by reporting period](images/sales_by_year.png)
 
@@ -93,7 +96,6 @@ For year-over-year measures, compare equivalent completed periods. A prior-perio
 
 ```text
 Raw_Data/                              Original CSV files
-Adventureworks.pbix                     Power BI report
 AdventureWorks_Analysis_Queries.sql     SQL analysis
 AdventureWorks_Excel_Analysis.xlsx      Excel summary and 2022 pivots
 adventure_works_analysis.py             Python quantity analysis
@@ -104,9 +106,9 @@ README.md                              Project documentation
 
 ## How to use
 
-1. Open `Adventureworks.pbix` in Power BI Desktop. Cached visuals can be viewed; refreshing requires updating its local CSV source paths to your `Raw_Data` folder.
+1. View the four dashboard pages through the screenshots above. The downloadable Power BI report is not included in this repository.
 2. For SQL, import the CSVs, combine yearly sales into `dbo.Sales`, and map the lookup tables to the names documented at the top of the SQL file. Importing and cleaning the source files is a prerequisite, not an automatic step in that script.
-3. Open the Excel workbook and note the outstanding Summary and screenshot corrections above.
+3. Open the Excel workbook to view the corrected Summary and Insights sheets and the January-June 2022 quantity pivots.
 4. From the repository folder, install pandas and matplotlib, then run `python adventure_works_analysis.py`.
 
 [Data dictionary](Data_Dictionary.md)
