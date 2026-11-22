@@ -80,7 +80,7 @@ Combined sales data from 2020, 2021, 2022.
 | TotalChildren    | Number of children                               | Whole Number  |
 | EducationLevel   | Highest education level                          | Text          |
 | Occupation       | Customer occupation                              | Text          |
-| HomeOwner        | Whether the customer owns a home (Yes/No)        | Text          |
+| HomeOwner        | Whether the customer owns a home (Y = Yes, N = No)        | Text          |
 
 ---
 
